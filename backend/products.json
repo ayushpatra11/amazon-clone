@@ -1,0 +1,77 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "price": 2999,
+            "discprice": 2174,
+            "name": "Vans Shoes",
+            "photo": "http://pngimg.com/uploads/vans/vans_PNG48.png",
+            "minidescription": "VANS Unisex shoes, Blue Color"
+        },
+        {
+            "id": 2,
+            "price": 3499,
+            "discprice": 2291,
+            "name": "Vans Shoes",
+            "photo": "http://pngimg.com/uploads/vans/vans_PNG49.png",
+            "minidescription": "VANS Unisex shoes, Brown Color"
+        },
+        {
+            "id": 3,
+            "price": 19990,
+            "discprice": 19990,
+            "name": "Apple HomePod",
+            "photo": "https://fdn.gsmarena.com/imgroot/news/21/03/homepod-discontinued/-1200/gsmarena_001.jpg",
+            "minidescription": "Apple HomePod"
+        },
+        {
+            "id": 4,
+            "price": 9990,
+            "discprice": 9990,
+            "name": "Apple HomePod Mini",
+            "photo": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/homepod-mini-select-202010?wid=934&hei=441&fmt=jpeg&qlt=95&.v=1601427724000",
+            "minidescription": "Apple HomePod Mini"
+        },
+        {
+            "id": 5,
+            "price": 49990,
+            "discprice": 49990,
+            "name": "Sony PlayStation-5",
+            "photo": "https://www.techadvisor.com/cmsdata/features/3646173/ps5_horizontal_thumb800.jpg",
+            "minidescription": "Sony PlayStation-5"
+        },
+        {
+            "id": 6,
+            "price": 399,
+            "discprice": 391,
+            "name": "Towels",
+            "photo": "https://images-na.ssl-images-amazon.com/images/I/71F81wkqbNL._SL1296_.jpg",
+            "minidescription": "Soft Towels Medium Size"
+        },
+        {
+            "id": 7,
+            "price": 6999,
+            "discprice": 6142,
+            "name": "Logitech G602 Gaming Keyboard",
+            "photo": "https://resource.logitechg.com/content/dam/gaming/en/products/g213/g213-gallery-1.png",
+            "minidescription": "Gaming Keyboard which can be used with Pc"
+        },
+        {
+            "id": 8,
+            "price": 5990,
+            "discprice": 5990,
+            "name": "Sony DualSense Controller (Black)",
+            "photo": "https://i.pinimg.com/originals/b7/4b/11/b74b115c8d12c77339cfc9d7565ffed6.png",
+            "minidescription": "Sony DualSense Controller (Black)"
+        },
+        {
+            "id": 9,
+            "price": 74999,
+            "discprice": 68790,
+            "name": "Apple iPhone 12 (Blue) 64GB",
+            "photo": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-blue-select-2020?wid=940&hei=1112&fmt=png-alpha&.v=1604343704000",
+            "minidescription": "Apple iPhone 12 (Blue) 64GB"
+        }
+
+    ]
+}
