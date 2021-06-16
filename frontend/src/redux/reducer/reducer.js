@@ -1,4 +1,4 @@
-import {ADD_TO_CART, REMOVE_FROM_CART, REMOVE_ALL} from '../actions/action';
+import {ADD_TO_CART, REMOVE_FROM_CART, REMOVE_ALL, SET_USER} from '../actions/action';
 
 export default function reducer(state, action){
     switch (action.type) {
@@ -89,6 +89,12 @@ export default function reducer(state, action){
                 }
             })
             return ({...state, count:tempq, cart: temp, total: temptotal})
+            break;
+
+        case SET_USER:
+            let tempuser = action.payload.user;
+            console.log(tempuser);
+            return ({...state, user: tempuser}) 
             break;
     
         default:

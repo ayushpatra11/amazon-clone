@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import logo from '../images/amazon.png'
 import {connect} from 'react-redux';
+import auth from '../firebase';
+import { SET_USER } from '../redux/actions/action';
 
 const NavbarContainer = styled.div`
     width: 100%;
@@ -178,13 +180,23 @@ const Icon = styled(Link)`
 
 
 
-function Navbar({num}) {
+function Navbar({num, user, dispatch}) {
 
     const [search, setSearch] = useState();
     const[open, setOpen] = useState(false);
 
     const handleMenu = () =>{
         setOpen(!open);
+    }
+
+    const handleUser= () =>{
+        if(user){
+            auth.signOut()
+                .then(() =>{
+                    dispatch({type: SET_USER, payload: {user: null}})
+                    console.log("Signed Out")
+                })
+        }
     }
 
     return (
@@ -203,7 +215,7 @@ function Navbar({num}) {
                 <h1>{num}</h1>               
                 </Icon>
                 <RightContainer open={open}>
-                    <Box><p>Hello, Guest</p><NavLink>Sign in</NavLink></Box>
+                    <Box><p>Hello, {user && user? user.displayName: "Guest"}</p><NavLink to={!user && '/login'} onClick={handleMenu}><div onClick={handleUser}>{!user? "Sign in": "Sign Out"}</div></NavLink></Box>
                     <Box><p>Returns &</p><NavLink>Orders</NavLink></Box>
                 </RightContainer>
                 <MenuButton onClick={handleMenu}>
@@ -218,7 +230,7 @@ function Navbar({num}) {
 }
 
 const mapStatetoProps = (state)=>{
-   return {num:state.count}
+   return {num:state.count, user: state.user}
 }
 
 export default connect(mapStatetoProps) (Navbar);

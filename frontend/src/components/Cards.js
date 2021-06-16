@@ -99,8 +99,8 @@ function Cards({name, photo, desc, price, discprice, dispatch, id, add}) {
                         <Header>{name}</Header>
                         {
                             (price===discprice)
-                            ? <DiscPrice>{price}</DiscPrice>
-                            : <><Price>{price}</Price> <DiscPrice>{discprice}</DiscPrice></>
+                            ? <DiscPrice>Rs. {price}</DiscPrice>
+                            : <><Price>Rs. {price}</Price> <DiscPrice>Rs. {discprice}</DiscPrice></>
                         }
                         
                         <p>{desc}</p>
@@ -113,7 +113,6 @@ function Cards({name, photo, desc, price, discprice, dispatch, id, add}) {
 }
 
 const mapDispatchtoProps = (dispatch, chosenProps) =>{
-    console.log(chosenProps.name);
     return {
         add: ()=>{
             dispatch({type: ADD_TO_CART, payload: {id: chosenProps.id, name: chosenProps.name, price: chosenProps.discprice, photo: chosenProps.photo}})

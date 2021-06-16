@@ -6,6 +6,7 @@ const initialStore = {
     count: 0,
     total: 0,
     cart: [],
+    user: {}
 }
 
 const store = createStore(reducer, initialStore);
